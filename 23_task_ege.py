@@ -5,3 +5,6 @@ def f(a, b):
         return 0
     if a < b:
         return f(a + 1, b) + f(a * 2, b)
+
+
+print(f(1, 28))
