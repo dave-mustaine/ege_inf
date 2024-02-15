@@ -15,4 +15,3 @@ while R < 76:
     R = int(n_bits, 2)
 
 print(numberr - 1)
-#  dlijeld;w
