@@ -75,19 +75,84 @@
 # print(variations(5, 23) * variations(23, 89))
 
 
-nums = set()
-
-
-# def variations(a, b):  #
-#     if a % 2 == 1 and a < 100:
-#         nums.add(a)
+# def variations(a, b):  # https://education.yandex.ru/ege/task/7f35c6c9-51a5-4f54-bd42-92f9c15ff6af
+#     if a == 27:
+#         return 0
 #     if a == b:
 #         return 1
 #     if a > b:
 #         return 0
 #     if a < b:
-#         return variations(a + 3, b) + variations(a * 3, b)
+#         return variations(a + 1, b) + variations(a * 2, b) + variations(a * 3, b)
 #
 #
-# print(variations(10, 100))
-# print(len(nums))
+# print(variations(5, 9) * variations(9, 43))
+
+
+# def variations(a, b):  # https://education.yandex.ru/ege/task/1e0cb6b4-4bc0-4443-bd23-71dbb3d80d36
+#     if a == 15:
+#         return 0
+#     if a == b:
+#         return 1
+#     if a > b:
+#         return 0
+#     if a < b:
+#         return variations(a + 1, b) + variations(a * 2, b) + variations(a * 3, b)
+
+
+# print(variations(1, 11) * variations(11, 25))
+
+
+# def variations(a, b):  # https://education.yandex.ru/ege/task/66370f14-aa4b-4640-8dca-e03c6c4386bf
+#     if a == b:
+#         return 1
+#     if a > b:
+#         return 0
+#     if a < b:
+#         return variations(a + 1, b) + variations(a + 2, b) + variations(a * 3, b)
+#
+#
+# print(variations(6, 15) * variations(15, 25) + variations(6, 21) * variations(21, 25) -
+#       2 * variations(6, 15) * variations(15, 21) * variations(21, 25))
+
+
+# def variations(a, b):  # https://education.yandex.ru/ege/task/fc7ab1b0-2ae1-4379-9e30-36ebb7b1683f
+#     if a == b:
+#         return 1
+#     if a > b:
+#         return 0
+#     if a < b:
+#         return variations(a + 1, b) + variations(a * 2, b) + variations(a * 3, b)
+#
+#
+# s = 0
+# for i in range(2, 15, 2):
+#     s += variations(i, 15)
+#
+# print(s)
+
+
+# def variations(a, b):  # https://education.yandex.ru/ege/task/5cabc1d6-16ab-44fe-a8c2-b55922553fa5
+#     if a == b:
+#         return 1
+#     if a < b:
+#         return 0
+#     if a > b:
+#         return variations(a - 2, b) + variations(a - 5, b)
+#
+#
+# print(variations(24, 3))
+
+
+def variations(a, b):  # https://education.yandex.ru/ege/task/5cabc1d6-16ab-44fe-a8c2-b55922553fa5
+    if a == 8:
+        return 0
+    if a == b:
+        return 1
+    if a < b:
+        return 0
+    if a > b:
+        return variations(a - 2, b) + variations(a // 2, b)
+
+
+print(variations(70, 22) * variations(22, 5))
