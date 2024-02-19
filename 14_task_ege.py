@@ -85,10 +85,6 @@
 
 # длинная арифметика
 # https://education.yandex.ru/ege/task/39991489-2021-4ee7-96a1-f45152dbfcd2
-from numba import njit
-
-
-@njit
 def counterr():
     x = 0
     raznost = 0
