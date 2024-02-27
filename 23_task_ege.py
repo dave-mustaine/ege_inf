@@ -144,15 +144,29 @@
 # print(variations(24, 3))
 
 
+# def variations(a, b):  # https://education.yandex.ru/ege/task/5cabc1d6-16ab-44fe-a8c2-b55922553fa5
+#     if a == 8:
+#         return 0
+#     if a == b:
+#         return 1
+#     if a < b:
+#         return 0
+#     if a > b:
+#         return variations(a - 2, b) + variations(a // 2, b)
+#
+#
+# print(variations(70, 22) * variations(22, 5))
+
+
 def variations(a, b):  # https://education.yandex.ru/ege/task/5cabc1d6-16ab-44fe-a8c2-b55922553fa5
-    if a == 8:
+    if a == 25:
         return 0
     if a == b:
         return 1
-    if a < b:
-        return 0
     if a > b:
-        return variations(a - 2, b) + variations(a // 2, b)
+        return 0
+    if a < b:
+        return variations(a + 3, b) + variations(a * 2, b) + variations(a * 5, b)
 
 
-print(variations(70, 22) * variations(22, 5))
+print(variations(5, 115))
