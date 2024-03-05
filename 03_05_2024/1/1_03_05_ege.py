@@ -1,4 +1,4 @@
-with open('27986_A.txt') as file_:
+with open('27986_B.txt') as file_:
     text = list(map(int, file_.readlines()))
 
 data = sorted(text)[::-1]
