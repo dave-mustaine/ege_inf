@@ -197,20 +197,32 @@
 #
 # print(sum(r))
 
-chisla = list()
-x_y = list()
-summ_x_y = list()
+# chisla = list()
+# x_y = list()
+# summ_x_y = list()
+#
+# for x in '0123456789abcd':
+#     for y in '0123456789abcd':
+#         s = int('14' + y + '5' + x + '2', 14) + int('31' + x + '2' + y + '3', 14)
+#         if s % 9 == 0:
+#             chisla.append(s)
+#             x_y.append((x, y))
+#             summ_x_y.append(int(x, 14) + int(y, 14))
+#
+# maximum_of_x_y = max(summ_x_y)
+#
+# for i in range(len(summ_x_y)):
+#     if summ_x_y[i] == maximum_of_x_y:
+#         print(x_y[i], maximum_of_x_y, chisla[i] / 9)
 
-for x in '0123456789abcd':
-    for y in '0123456789abcd':
-        s = int('14' + y + '5' + x + '2', 14) + int('31' + x + '2' + y + '3', 14)
-        if s % 9 == 0:
-            chisla.append(s)
-            x_y.append((x, y))
-            summ_x_y.append(int(x, 14) + int(y, 14))
+s = 1 * 3 ** 37 + 2 * 3 ** 23 + 3 ** 21 + 4 * 3 ** 4 + 9
 
-maximum_of_x_y = max(summ_x_y)
+s = abs(s)
 
-for i in range(len(summ_x_y)):
-    if summ_x_y[i] == maximum_of_x_y:
-        print(x_y[i], maximum_of_x_y, chisla[i] / 9)
+r = []
+
+while s > 0:
+    r.append(s % 9)
+    s //= 9
+
+print(r.count(0))

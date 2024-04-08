@@ -16,7 +16,19 @@
 #     num_of_three = a.count('3')
 #
 #     print(a, num_of_three)
+#
+#     n = n + '6'
 
-    # n = n + '6'
+a = '5' * 200
+while '555' in a or '333' in a:
+    if '555' in a:
+        a = a.replace('555', '3')
+    else:
+        a = a.replace('333', '5')
 
-print('1' + ('6666' * 11))
+numm = 0
+
+for i in range(len(a)):
+    numm += int(a[i])
+
+print(numm)

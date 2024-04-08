@@ -61,15 +61,25 @@
 #
 # print(a + b + c + d + e + f + g + h + i + j + k + l + m + n)
 
-n = 0
-R = 0
+# n = 0
+# R = 0
+#
+# while R < 109:
+#     n += 1
+#     n_6 = list()
+#
+#     while n > 0:
+#         n_6.append(n % 6)
+#         n //= 6
+#
+#     zeros = n_6.count(0)
 
-while R < 109:
-    n += 1
-    n_6 = list()
-
-    while n > 0:
-        n_6.append(n % 6)
-        n //= 6
-
-    zeros = n_6.count(0)
+nns = []
+for N in (1_000, 10_000):
+    nn = str(N)
+    if int(nn[0]) % 2 == 0:
+        R = int(nn[0]) + int(nn[2]) + abs(int(nn[1]) - int(nn[4]))
+    else:
+        for x in nn:
+            nns.append(x)
+            nnns = nns.sort().reverse()
