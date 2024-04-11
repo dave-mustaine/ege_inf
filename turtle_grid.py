@@ -8,9 +8,12 @@ tr.speed(1_000)
 
 def go_to_center(x_of_center, y_of_center):
     tr.goto(x_of_center, y_of_center)
+    tr.left(90)
 
 
 def paint_vertical_grid(xv, yv, num_of_lines_v):
+    tr.right(90)
+
     for _ in range(num_of_lines_v):
         tr.goto(xv, yv)
 
@@ -21,6 +24,8 @@ def paint_vertical_grid(xv, yv, num_of_lines_v):
 
 
 def paint_horizontal_grid(xh, yh, num_of_lines_h):
+    tr.left(90)
+
     for _ in range(num_of_lines_h):
         tr.goto(xh, yh)
 
@@ -51,11 +56,7 @@ def paint_main_axis(x_of_center, y_of_center):
 tr.up()
 tr.color('#ff9191')
 
-tr.right(90)
-
 paint_vertical_grid(-660, 400, 133)
-
-tr.left(90)
 
 paint_horizontal_grid(-660, 400, 81)
 
