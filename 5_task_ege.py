@@ -74,12 +74,29 @@
 #
 #     zeros = n_6.count(0)
 
-nns = []
-for N in (1_000, 10_000):
-    nn = str(N)
-    if int(nn[0]) % 2 == 0:
-        R = int(nn[0]) + int(nn[2]) + abs(int(nn[1]) - int(nn[4]))
+# nns = []
+# for N in (1_000, 10_000):
+#     nn = str(N)
+#     if int(nn[0]) % 2 == 0:
+#         R = int(nn[0]) + int(nn[2]) + abs(int(nn[1]) - int(nn[4]))
+#     else:
+#         for x in nn:
+#             nns.append(x)
+#             nnns = nns.sort().reverse()
+
+R = 0
+N = 0
+bin_n = ''
+
+while R < 179:
+    N += 1
+    bin_n = bin(N)[2::]
+
+    if (N % 2) == 0:
+        bin_n = '1' + bin_n + '1'
     else:
-        for x in nn:
-            nns.append(x)
-            nnns = nns.sort().reverse()
+        bin_n = bin_n + '10'
+
+    R = int(bin_n, 2)
+
+print(N)
