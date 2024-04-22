@@ -18,7 +18,7 @@ from ipaddress import *
 
 count = 0  # https://education.yandex.ru/ege/task/8279c0b0-e9f8-475e-b863-e94d12a87048
 
-for ip in ip_network('114.179.203.128/255.255.255.192').hosts():
+for ip in ip_network('114.179.203.128/255.255.255.192'):
     if bin(int(ip))[2:].count('1') % 3 == 0:
         count += 1
 
