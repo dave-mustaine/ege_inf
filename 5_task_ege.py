@@ -84,19 +84,26 @@
 #             nns.append(x)
 #             nnns = nns.sort().reverse()
 
+# R = 0
+# N = 0
+# bin_n = ''
+#
+# while R < 179:
+#     N += 1
+#     bin_n = bin(N)[2::]
+#
+#     if (N % 2) == 0:
+#         bin_n = '1' + bin_n + '1'
+#     else:
+#         bin_n = bin_n + '10'
+#
+#     R = int(bin_n, 2)
+#
+# print(N)
+
 R = 0
 N = 0
-bin_n = ''
 
-while R < 179:
+while R < 100:
     N += 1
     bin_n = bin(N)[2::]
-
-    if (N % 2) == 0:
-        bin_n = '1' + bin_n + '1'
-    else:
-        bin_n = bin_n + '10'
-
-    R = int(bin_n, 2)
-
-print(N)
