@@ -126,21 +126,31 @@
 #
 # print(counter)
 
-lines = open('9_7.csv').readlines()  # 7.
+# lines = open('9_7.csv').readlines()  # 7.
+#
+# counter = 0
+# odd_number_counter = 0
+#
+# for line in lines:
+#     data = [int(number) for number in line.split(',')]
+#
+#     len_of_data = len(set(data))
+#
+#     for number in data:
+#         if number % 2 == 1:
+#             odd_number_counter += 1
+#
+#     if (len_of_data < 6 and odd_number_counter != 3) or (len_of_data == 6 and odd_number_counter == 3):
+#         counter += 1
+#
+# print(counter)
+
+lines = open('9_8.csv').readlines()
 
 counter = 0
-odd_number_counter = 0
 
 for line in lines:
-    data = [int(number) for number in line.split(',')]
+    data = [int(x) for x in line.split(';')]
 
-    len_of_data = len(set(data))
+    sum_of_data = sum(data)
 
-    for number in data:
-        if number % 2 == 1:
-            odd_number_counter += 1
-
-    if (len_of_data < 6 and odd_number_counter != 3) or (len_of_data == 6 and odd_number_counter == 3):
-        counter += 1
-
-print(counter)

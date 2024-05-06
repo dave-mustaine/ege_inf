@@ -101,9 +101,30 @@
 #
 # print(N)
 
+def seven_system(number):
+    seventh_system_number = ''
+    while number != 0:
+        seventh_system_number = str(number % 7) + seventh_system_number
+        number = number // 7
+
+    return seventh_system_number
+
+
 R = 0
 N = 0
 
 while R < 100:
     N += 1
-    bin_n = bin(N)[2::]
+    seventh_number = seven_system(N)
+
+    if N % 7 == 0:
+        seventh_number = seventh_number + seventh_number[-2::]
+    else:
+        remainder_of_number = N % 7
+        seventh_remainder = seven_system(remainder_of_number)
+
+        seventh_number = seventh_number + seventh_remainder
+
+    R = int(seventh_number, 7)
+
+print(N)
