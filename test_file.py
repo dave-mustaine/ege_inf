@@ -1,6 +1,6 @@
-# print(max([int(input()), int(input())]))
+n = 0
 
-# print(len(input().strip()))
+a = '8' + '5' * n
 
-# months = ['Зима', 'Зима', 'Весна', 'Весна', 'Весна', 'Лето', 'Лето', 'Лето', 'Осень', 'Осень', 'Осень', 'Зима']
-# print(months[int(input()) - 1])
+while (sum(x) for x in a) <= 66:
+    pass
