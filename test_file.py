@@ -18,32 +18,39 @@
 #
 # print(sum(primes))
 
-lines = '''25 K Igor
-11 E Kirill
-15 B Anna
-20 E Igor
-7 E Anna
-13 E Kirill
-21 E Anna
-33 K Ivan
-17 E Kirill
-20 E Anna'''.split('\n')
+# lines = '''25 K Igor
+# 11 E Kirill
+# 15 B Anna
+# 20 E Igor
+# 7 E Anna
+# 13 E Kirill
+# 21 E Anna
+# 33 K Ivan
+# 17 E Kirill
+# 20 E Anna'''.split('\n')
+#
+# drivers = list()
+# salaries = list()
+# taxis = {'E': 10,
+#          'K': 15,
+#          'B': 30}
+#
+# for line in lines:
+#     minutes, taxi, driver = line.split(' ')
+#
+#     if driver not in drivers:
+#         drivers.append(driver)
+#         salaries.append(int(minutes) * taxis[taxi])
+#
+#     elif driver in drivers:
+#         num = drivers.index(driver)
+#         salaries[num] += int(minutes) * taxis[taxi]
+#
+# print(drivers[salaries.index(max(salaries))])
 
-drivers = list()
-salaries = list()
-taxis = {'E': 10,
-         'K': 15,
-         'B': 30}
-
-for line in lines:
-    minutes, taxi, driver = line.split(' ')
-
-    if driver not in drivers:
-        drivers.append(driver)
-        salaries.append(int(minutes) * taxis[taxi])
-
-    elif driver in drivers:
-        num = drivers.index(driver)
-        salaries[num] += int(minutes) * taxis[taxi]
-
-print(drivers[salaries.index(max(salaries))])
+print(bin(1025)[2::].count('1'))
+# print(int('a7', 16), int('251', 8))
+# print(int('351', 8))
+# print(int('125', 8))
+# print(int('55', 16))
+# print(int('75', 16))

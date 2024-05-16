@@ -46,19 +46,36 @@
 #
 # print(f(Decimal('200')) / f(Decimal('198')))
 
+# import sys
+# from functools import lru_cache
+#
+# sys.setrecursionlimit(1_000_000_000)
+#
+#
+# @lru_cache
+# def f(n):
+#     if n < 3:
+#         return 2
+#     elif n > 2 and (n % 2):
+#         return 2 * f(n - 1) - f(n - 2) - 2
+#     else:
+#         return 2 * f(n - 2) - f(n - 1) + 2
+#
+#
+# print(f(17))
+
 import sys
 from functools import lru_cache
 
 sys.setrecursionlimit(1_000_000_000)
 
+
 @lru_cache
 def f(n):
-    if n < 3:
-        return 2
-    elif n > 2 and (n % 2):
-        return 2 * f(n - 1) - f(n - 2) - 2
-    else:
-        return 2 * f(n - 2) - f(n - 1) + 2
+    if n == 1:
+        return 1
+    elif n > 1:
+        return n * f(n - 1)
 
 
-print(f(17))
+print((f(2024) - f(2023)) / f(2022))
