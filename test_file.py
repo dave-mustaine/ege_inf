@@ -1,15 +1,20 @@
-n = 0
-r = 0
+# print('w x y z F')
+#
+# for w in (0, 1):
+#     for x in (0, 1):
+#         for y in (0, 1):
+#             for z in (0, 1):
+#                 f = (w == z) or (x and (not y)) or w
+#
+#                 if not f:
+#                     print(w, x, y, z, f)
 
-while r < 76:
-    n += 1
-    bin_n = bin(n)[2::]
+a = '1' + '0' * 60
 
-    if (n % 3) == 0:
-        bin_n = bin_n + bin_n[-3::]
+while '1' in a:
+    if '10' in a:
+        a = a.replace('10', '0001')
     else:
-        bin_n = bin_n + bin((n % 3) * 3)[2::]
+        a = a.replace('1', '00')
 
-    r = int(bin_n, 2)
-
-    print(n, r)
+print(len(a))
